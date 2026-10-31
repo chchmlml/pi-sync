@@ -12,6 +12,12 @@ mkdir -p "$CFG/skills" "$CFG/extensions" "$CFG/prompts" "$CFG/themes"
 # 必备文件（mcp-cache.json 是纯缓存，pi 连上 MCP 服务器会自动生成，不备份）
 rsync -a "$PI_DIR/settings.json" "$CFG/"
 
+# 共享 MCP 配置（~/.config/mcp/mcp.json，镜像路径保存）
+if [ -f "$HOME/.config/mcp/mcp.json" ]; then
+  mkdir -p "$CFG/mcp"
+  rsync -a "$HOME/.config/mcp/mcp.json" "$CFG/mcp/"
+fi
+
 # 技能目录（--delete：仓库跟随本地删除；绝不触碰 ~/.agents 以外路径）
 if [ -d "$SKILLS_SRC" ]; then
   rsync -a --delete --exclude='.DS_Store' --exclude='lark-*' --delete-excluded "$SKILLS_SRC/" "$CFG/skills/"

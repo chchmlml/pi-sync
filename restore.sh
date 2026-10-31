@@ -1,6 +1,6 @@
 #!/bin/sh
 # 从本仓库 config/ 恢复 pi 核心配置（暴力覆盖受管路径），并安装 settings 里的扩展包
-# 受管路径：settings.json / skills/ / AGENTS.md 等 / extensions|prompts|themes
+# 受管路径：settings.json / ~/.config/mcp/mcp.json / skills/ / AGENTS.md 等 / extensions|prompts|themes
 # 绝不触碰：auth.json、sessions/、npm/、models-store.json
 set -eu
 
@@ -19,6 +19,10 @@ fi
 mkdir -p "$PI_DIR"
 
 rsync -a "$CFG/settings.json" "$PI_DIR/"
+if [ -f "$CFG/mcp/mcp.json" ]; then
+  mkdir -p "$HOME/.config/mcp"
+  rsync -a "$CFG/mcp/mcp.json" "$HOME/.config/mcp/"
+fi
 # exclude lark-*：保护本地 lark 技能不被 --delete 删掉
 rsync -a --delete --exclude='.DS_Store' --exclude='lark-*' "$CFG/skills/" "$SKILLS_DST/"
 

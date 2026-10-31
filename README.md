@@ -7,6 +7,7 @@
 | 仓库路径 | 本机路径 |
 |---|---|
 | `config/settings.json` | `~/.pi/agent/settings.json` |
+| `config/mcp/mcp.json` | `~/.config/mcp/mcp.json`（共享 MCP 配置） |
 | `config/skills/` | `~/.agents/skills/`（排除 `lark-*`） |
 | `config/AGENTS.md` 等占位文件 | `~/.pi/agent/AGENTS.md`、`SYSTEM.md`、`APPEND_SYSTEM.md`、`keybindings.json`（出现后自动纳入） |
 | `config/extensions/` `prompts/` `themes/` | `~/.pi/agent/` 下同名目录（出现后自动纳入） |
