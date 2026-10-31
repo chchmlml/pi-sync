@@ -1,0 +1,18 @@
+{
+  "lastChangelogVersion": "1.4.0",
+  "defaultProvider": "xiaomi",
+  "defaultModel": "mimo-v2.6-flash",
+  "packages": [
+    "npm:@destiner/pi-subagents",
+    "npm:@pi-minimal/plan-mode",
+    "npm:pi-mcp-adapter",
+    "npm:@dietrichgebert/ponytail",
+    "npm:@schovest/pi-goal",
+    "npm:pi-tui-status-beautifier",
+    "npm:pi-zentui",
+    "npm:pi-context-view"
+  ],
+  "extensions": [
+    "-builtin:mcp"
+  ]
+}
