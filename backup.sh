@@ -14,7 +14,7 @@ rsync -a "$PI_DIR/settings.json" "$CFG/"
 
 # 技能目录（--delete：仓库跟随本地删除；绝不触碰 ~/.agents 以外路径）
 if [ -d "$SKILLS_SRC" ]; then
-  rsync -a --delete --exclude='.DS_Store' "$SKILLS_SRC/" "$CFG/skills/"
+  rsync -a --delete --exclude='.DS_Store' --exclude='lark-*' --delete-excluded "$SKILLS_SRC/" "$CFG/skills/"
 fi
 
 # 可选文件：源存在才覆盖，否则保留仓库里的占位空文件

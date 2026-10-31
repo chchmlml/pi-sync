@@ -19,7 +19,8 @@ fi
 mkdir -p "$PI_DIR"
 
 rsync -a "$CFG/settings.json" "$PI_DIR/"
-rsync -a --delete --exclude='.DS_Store' "$CFG/skills/" "$SKILLS_DST/"
+# exclude lark-*：保护本地 lark 技能不被 --delete 删掉
+rsync -a --delete --exclude='.DS_Store' --exclude='lark-*' "$CFG/skills/" "$SKILLS_DST/"
 
 # 非空才恢复，避免把占位空文件写进本地
 for f in AGENTS.md SYSTEM.md APPEND_SYSTEM.md keybindings.json; do

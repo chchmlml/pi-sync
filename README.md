@@ -7,11 +7,11 @@
 | 仓库路径 | 本机路径 |
 |---|---|
 | `config/settings.json` | `~/.pi/agent/settings.json` |
-| `config/skills/` | `~/.agents/skills/` |
+| `config/skills/` | `~/.agents/skills/`（排除 `lark-*`） |
 | `config/AGENTS.md` 等占位文件 | `~/.pi/agent/AGENTS.md`、`SYSTEM.md`、`APPEND_SYSTEM.md`、`keybindings.json`（出现后自动纳入） |
 | `config/extensions/` `prompts/` `themes/` | `~/.pi/agent/` 下同名目录（出现后自动纳入） |
 
-**不备份**：`auth.json`（凭据）、`sessions/`、`npm/`、`models-store.json`、`mcp-cache.json`（机器生成/纯缓存，pi 会自动重建）。
+**不备份**：`auth.json`（凭据）、`sessions/`、`npm/`、`models-store.json`、`mcp-cache.json`（机器生成/纯缓存，pi 会自动重建）、`lark-*` 技能（restore 不会动本地 lark 技能）。
 
 ## 用法
 
