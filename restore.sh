@@ -1,6 +1,6 @@
 #!/bin/sh
 # 从本仓库 config/ 恢复 pi 核心配置（暴力覆盖受管路径），并安装 settings 里的扩展包
-# 受管路径：settings.json / mcp-cache.json / skills/ / AGENTS.md 等 / extensions|prompts|themes
+# 受管路径：settings.json / skills/ / AGENTS.md 等 / extensions|prompts|themes
 # 绝不触碰：auth.json、sessions/、npm/、models-store.json
 set -eu
 
@@ -19,9 +19,6 @@ fi
 mkdir -p "$PI_DIR"
 
 rsync -a "$CFG/settings.json" "$PI_DIR/"
-if [ -f "$CFG/mcp-cache.json" ]; then
-  rsync -a "$CFG/mcp-cache.json" "$PI_DIR/"
-fi
 rsync -a --delete --exclude='.DS_Store' "$CFG/skills/" "$SKILLS_DST/"
 
 # 非空才恢复，避免把占位空文件写进本地

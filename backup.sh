@@ -9,9 +9,8 @@ SKILLS_SRC="$HOME/.agents/skills"
 
 mkdir -p "$CFG/skills" "$CFG/extensions" "$CFG/prompts" "$CFG/themes"
 
-# 必备文件
+# 必备文件（mcp-cache.json 是纯缓存，pi 连上 MCP 服务器会自动生成，不备份）
 rsync -a "$PI_DIR/settings.json" "$CFG/"
-rsync -a "$PI_DIR/mcp-cache.json" "$CFG/"
 
 # 技能目录（--delete：仓库跟随本地删除；绝不触碰 ~/.agents 以外路径）
 if [ -d "$SKILLS_SRC" ]; then
