@@ -10,7 +10,8 @@
     "npm:pi-context-view",
     "npm:pi-mcp-adapter",
     "npm:pi-tasks",
-    "npm:pi-dynamic-workflows"
+    "npm:pi-dynamic-workflows",
+    "npm:@agent-stash/init"
   ],
   "extensions": [
     "-builtin:mcp"
