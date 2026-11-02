@@ -11,7 +11,8 @@
     "npm:pi-mcp-adapter",
     "npm:pi-tasks",
     "npm:pi-dynamic-workflows",
-    "npm:@agent-stash/init"
+    "npm:@agent-stash/init",
+    "npm:opencode-pi"
   ],
   "extensions": [
     "-builtin:mcp"
@@ -23,5 +24,11 @@
     "xiaomi/mimo-v2.6-pro",
     "xiaomi/mimo-v2.6-pro-ultraspeed"
   ],
-  "defaultThinkingLevel": "high"
+  "defaultThinkingLevel": "high",
+  "theme": "zed-dark",
+  "terminal": {
+    "showImages": true,
+    "showTerminalProgress": false
+  },
+  "enableSkillCommands": true
 }
