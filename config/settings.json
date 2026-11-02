@@ -5,12 +5,22 @@
   "packages": [
     "npm:@destiner/pi-subagents",
     "npm:@pi-minimal/plan-mode",
-    "npm:pi-mcp-adapter",
     "npm:@dietrichgebert/ponytail",
     "npm:@schovest/pi-goal",
-    "npm:pi-context-view"
+    "npm:pi-context-view",
+    "npm:pi-mcp-adapter",
+    "npm:pi-tasks",
+    "npm:pi-dynamic-workflows"
   ],
   "extensions": [
     "-builtin:mcp"
-  ]
+  ],
+  "enabledModels": [
+    "deepseek/deepseek-flash",
+    "deepseek/deepseek-v4-pro",
+    "xiaomi/mimo-v2.6-flash",
+    "xiaomi/mimo-v2.6-pro",
+    "xiaomi/mimo-v2.6-pro-ultraspeed"
+  ],
+  "defaultThinkingLevel": "high"
 }
