@@ -1,15 +1,22 @@
 {
   "mcpServers": {
-    "context7": {
-      "url": "https://mcp.context7.com/mcp",
-      "protocolVersion": "auto"
+    "tablepro": {
+      "type": "http",
+      "url": "http://127.0.0.1:23508/mcp",
+      "headers": {
+        "Authorization": "Bearer tp_3aXVp-RlwJxx7ZC5j5peuX4wAArEBRS47c57we781wE"
+      },
+      "enabled": false
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"],
+      "enabled": false
     },
     "codegraph": {
       "command": "codegraph",
-      "args": [
-        "serve",
-        "--mcp"
-      ]
+      "args": ["serve", "--mcp"],
+      "enabled": true
     }
   }
 }
