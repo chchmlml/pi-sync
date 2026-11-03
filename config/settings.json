@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.4.0",
+  "lastChangelogVersion": "1.5.0",
   "defaultProvider": "xiaomi",
   "defaultModel": "mimo-v2.6-flash",
   "packages": [
@@ -12,7 +12,8 @@
     "npm:pi-tasks",
     "npm:pi-dynamic-workflows",
     "npm:@agent-stash/init",
-    "npm:opencode-pi"
+    "npm:opencode-pi",
+    "npm:pi-cc-extensions"
   ],
   "extensions": [
     "-builtin:mcp"
@@ -25,10 +26,14 @@
     "xiaomi/mimo-v2.6-pro-ultraspeed"
   ],
   "defaultThinkingLevel": "high",
-  "theme": "zed-dark",
+  "theme": "cc-dark",
   "terminal": {
     "showImages": true,
     "showTerminalProgress": false
   },
-  "enableSkillCommands": true
+  "enableSkillCommands": true,
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:pi-mcp-adapter\",\"scope\":\"user\"}": "7.0.0",
+    "{\"source\":\"npm:pi-tasks\",\"scope\":\"user\"}": "0.3.1"
+  }
 }
