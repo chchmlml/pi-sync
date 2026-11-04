@@ -7,13 +7,14 @@
     "npm:@pi-minimal/plan-mode",
     "npm:@dietrichgebert/ponytail",
     "npm:@schovest/pi-goal",
-    "npm:pi-context-view",
     "npm:pi-mcp-adapter",
-    "npm:pi-tasks",
     "npm:pi-dynamic-workflows",
     "npm:@agent-stash/init",
     "npm:opencode-pi",
-    "npm:pi-cc-extensions"
+    "npm:pi-cc-extensions",
+    "npm:pi-rename",
+    "npm:pi-clarify",
+    "npm:@narumitw/pi-lsp"
   ],
   "extensions": [
     "-builtin:mcp"
@@ -25,8 +26,8 @@
     "xiaomi/mimo-v2.6-pro",
     "xiaomi/mimo-v2.6-pro-ultraspeed"
   ],
-  "defaultThinkingLevel": "high",
-  "theme": "cc-dark",
+  "defaultThinkingLevel": "medium",
+  "theme": "zed-dark",
   "terminal": {
     "showImages": true,
     "showTerminalProgress": false
@@ -34,6 +35,7 @@
   "enableSkillCommands": true,
   "extensionChangelogVersions": {
     "{\"source\":\"npm:pi-mcp-adapter\",\"scope\":\"user\"}": "7.0.0",
-    "{\"source\":\"npm:pi-tasks\",\"scope\":\"user\"}": "0.3.1"
+    "{\"source\":\"npm:pi-tasks\",\"scope\":\"user\"}": "0.3.1",
+    "{\"source\":\"npm:pi-lens\",\"scope\":\"user\"}": "4.4.8"
   }
 }
