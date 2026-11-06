@@ -3,18 +3,16 @@
   "defaultProvider": "xiaomi",
   "defaultModel": "mimo-v2.6-flash",
   "packages": [
-    "npm:@destiner/pi-subagents",
     "npm:@pi-minimal/plan-mode",
     "npm:@dietrichgebert/ponytail",
-    "npm:@schovest/pi-goal",
     "npm:pi-mcp-adapter",
     "npm:pi-dynamic-workflows",
     "npm:@agent-stash/init",
-    "npm:opencode-pi",
-    "npm:pi-cc-extensions",
     "npm:pi-rename",
     "npm:pi-clarify",
-    "npm:@narumitw/pi-lsp"
+    "npm:@narumitw/pi-lsp",
+    "npm:pi-cc-extensions",
+    "npm:pi-memory"
   ],
   "extensions": [
     "-builtin:mcp"
@@ -34,8 +32,9 @@
   },
   "enableSkillCommands": true,
   "extensionChangelogVersions": {
-    "{\"source\":\"npm:pi-mcp-adapter\",\"scope\":\"user\"}": "7.0.0",
+    "{\"source\":\"npm:pi-mcp-adapter\",\"scope\":\"user\"}": "7.0.1",
     "{\"source\":\"npm:pi-tasks\",\"scope\":\"user\"}": "0.3.1",
-    "{\"source\":\"npm:pi-lens\",\"scope\":\"user\"}": "4.4.8"
+    "{\"source\":\"npm:pi-lens\",\"scope\":\"user\"}": "4.4.8",
+    "{\"source\":\"npm:@narumitw/pi-lsp\",\"scope\":\"user\"}": "0.49.12"
   }
 }
