@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.5.0",
+  "lastChangelogVersion": "1.5.2",
   "defaultProvider": "xiaomi",
   "defaultModel": "mimo-v2.6-flash",
   "packages": [
@@ -11,8 +11,9 @@
     "npm:pi-rename",
     "npm:pi-clarify",
     "npm:@narumitw/pi-lsp",
+    "npm:pi-memory",
     "npm:pi-cc-extensions",
-    "npm:pi-memory"
+    "npm:@quintinshaw/pi-dynamic-workflows"
   ],
   "extensions": [
     "-builtin:mcp"
@@ -25,16 +26,25 @@
     "xiaomi/mimo-v2.6-pro-ultraspeed"
   ],
   "defaultThinkingLevel": "medium",
-  "theme": "zed-dark",
+  "theme": "opencode",
   "terminal": {
     "showImages": true,
-    "showTerminalProgress": false
+    "showTerminalProgress": true
   },
   "enableSkillCommands": true,
   "extensionChangelogVersions": {
     "{\"source\":\"npm:pi-mcp-adapter\",\"scope\":\"user\"}": "7.0.1",
     "{\"source\":\"npm:pi-tasks\",\"scope\":\"user\"}": "0.3.1",
     "{\"source\":\"npm:pi-lens\",\"scope\":\"user\"}": "4.4.8",
-    "{\"source\":\"npm:@narumitw/pi-lsp\",\"scope\":\"user\"}": "0.49.12"
-  }
+    "{\"source\":\"npm:@narumitw/pi-lsp\",\"scope\":\"user\"}": "0.49.12",
+    "{\"source\":\"npm:pi-memory\",\"scope\":\"user\"}": "0.4.2",
+    "{\"source\":\"npm:pi-cc-extensions\",\"scope\":\"user\"}": "1.0.17"
+  },
+  "editorPaddingX": 1,
+  "outputPad": 1,
+  "modelThinkingLevels": {
+    "deepseek/deepseek-flash": "high",
+    "xiaomi/mimo-v2.6-flash": "high"
+  },
+  "tuiMode": "fullscreen"
 }
